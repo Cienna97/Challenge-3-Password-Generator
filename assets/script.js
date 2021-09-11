@@ -42,6 +42,7 @@ if (uppercase == true) {
 var special = confirm("Do you want to include special characters?");
 if (special == true) {
   passwordChars = passwordChars.concat(specials)
+  console.log(special);
 }
 
 var numbers = confirm("Do you want to include numbers?");
@@ -49,11 +50,13 @@ if(numbers == true) {
   passwordChars = passwordChars.concat(number)
 }
 
+var password = generatePassword(passwordChars, length);
 
+var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
 }
 
-// Add event listener to generate button
+//Event listener 
 generateBtn.addEventListener("click", writePassword);
