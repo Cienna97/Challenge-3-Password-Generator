@@ -1,9 +1,18 @@
-// Assignment code here
+//variables for random password options 
 var lower = "abcdefghjiklmnopqrstuvwyz";
 var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var specials = "!@#$%^&*_-+=";
 var number = "0123456789";
 
+function generatePassword(chars, len) {
+  retVal = "";
+
+  for (var i = 0, n = len; i < len; ++i) {
+    retVal += chars.charAt(Math.floor(Math.random() *n));
+  }
+  return retVal;
+  
+}
 
 
 // Get references to the #generate element
