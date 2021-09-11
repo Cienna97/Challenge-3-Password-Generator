@@ -1,3 +1,5 @@
+var generateBtn = document.querySelector("#generate");
+
 //variables for random password options 
 var lower = "abcdefghjiklmnopqrstuvwyz";
 var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -11,17 +13,21 @@ function generatePassword(chars, len) {
     retVal += chars.charAt(Math.floor(Math.random() *n));
   }
   return retVal;
-  
+
 }
 
 
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
+
 
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+//Prompt for character length limit
+  passwordChars = "";
+  var length = prompt("Choose a password length between 8-128 characters");
+  if (length > 128 || length < 8) {
+    var length = prompt("Please enter a number between 8-128");
+  }
 
   passwordText.value = password;
 
