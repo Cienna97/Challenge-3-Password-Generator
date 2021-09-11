@@ -29,6 +29,17 @@ function writePassword() {
     var length = prompt("Please enter a number between 8-128");
   }
 
+var lowercase = confirm("Would you like to include lowercase letters?");
+if (lowercase == true) {
+  passwordChars = passwordChars.concat(lower)
+}
+
+var uppercase = confirm("Would you like to include uppercase letters?");
+if (uppercase == true) {
+  passwordChars = passwordChars.concat(upper)
+}
+
+
   passwordText.value = password;
 
 }
