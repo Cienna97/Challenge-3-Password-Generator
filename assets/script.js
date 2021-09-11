@@ -17,8 +17,6 @@ function generatePassword(chars, len) {
 }
 
 
-
-
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -28,27 +26,27 @@ function writePassword() {
   if (length > 128 || length < 8) {
     var length = prompt("Please enter a number between 8-128");
   }
-
+//Wether or not user wants to include lowercase letters
 var lowercase = confirm("Would you like to include lowercase letters?");
 if (lowercase == true) {
   passwordChars = passwordChars.concat(lower)
 }
-
+//Wether or not user wants to use uppercase letters
 var uppercase = confirm("Would you like to include uppercase letters?");
 if (uppercase == true) {
   passwordChars = passwordChars.concat(upper)
 }
-
+//Wether or not user wants to include special characters
 var special = confirm("Do you want to include special characters?");
 if (special == true) {
   passwordChars = passwordChars.concat(specials)
 }
-
+//Whether or not user wants to include numbers
 var numbers = confirm("Do you want to include numbers?");
 if(numbers == true) {
   passwordChars = passwordChars.concat(number)
 }
-
+//Generate the password using specified length and characters
 var password = generatePassword(passwordChars, length);
 
 var passwordText = document.querySelector("#password");
