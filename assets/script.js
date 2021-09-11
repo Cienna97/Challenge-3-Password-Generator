@@ -39,6 +39,17 @@ if (uppercase == true) {
   passwordChars = passwordChars.concat(upper)
 }
 
+var special = confirm("Do you want to include special characters?");
+if (special == true) {
+  passwordChars = passwordChars.concat(specials)
+}
+
+var numbers = confirm("Do you want to include numbers?");
+if(numbers == true) {
+  passwordChars = passwordChars.concat(number)
+}
+
+
 
   passwordText.value = password;
 
