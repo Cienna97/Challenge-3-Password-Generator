@@ -10,7 +10,7 @@ function generatePassword(chars, len) {
   retVal = "";
 
   for (var i = 0, n = len; i < len; ++i) {
-    retVal += chars.charAt(Math.floor(Math.random() *n));
+    retVal += chars.charAt(Math.floor(Math.random() *chars.length));
   }
   return retVal;
 
@@ -42,7 +42,6 @@ if (uppercase == true) {
 var special = confirm("Do you want to include special characters?");
 if (special == true) {
   passwordChars = passwordChars.concat(specials)
-  console.log(special);
 }
 
 var numbers = confirm("Do you want to include numbers?");
