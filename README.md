@@ -1,1 +1,2 @@
-# Password Generator Starter Code
+#Generate a Secure Password
+Th
