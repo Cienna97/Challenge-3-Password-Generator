@@ -16,7 +16,6 @@ function generatePassword(chars, len) {
 
 }
 
-
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
